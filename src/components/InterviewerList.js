@@ -9,7 +9,7 @@ export default function(props) {
   const interviewerSelected = props.interviewer;
   const interviewers = props.interviewers;
   
-  console.log(props);
+  console.log(props.setItem);
 
   const allInterviewers = interviewers.map((interviewer) => {
     return (
@@ -18,7 +18,7 @@ export default function(props) {
       name={interviewer.name}
       avatar={interviewer.avatar}
       selected={interviewer.id === interviewerSelected}
-      setInterviewers={(event) => props.onChange(interviewer.id)}
+      setInterviewer={(event) => props.onChange(interviewer.id)}
     />)
   });
   
