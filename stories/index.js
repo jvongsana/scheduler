@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
@@ -17,6 +17,7 @@ import Show from "components/Appointments/Show";
 import Confirm from "components/Appointments/Confirm";
 import Status from "components/Appointments/Status";
 import Error from "components/Appointments/Error";
+import Form from "components/Appointments/Form";
 
 storiesOf("Button", module)
   .addParameters({
@@ -149,12 +150,65 @@ storiesOf("Appointment", module)
   backgrounds: [{ name: "white", value: "#fff", default: true }]
 })
 .add("Appointment", () => <Appointment />)
-.add("Appointment with Time", () => <Appointment time="12pm" />)
-.add("Header", () => <Header time="12pm" />)
-.add("Empty", () => <Empty onAdd={action("onAdd")}/>)
-.add("Show", () => <Show student="Lydia Miller-Jones" interviewer={interviewer} onEdit={action("onEdit")} onDelete={action("onDelete")} />)
-.add("Confirm", () => <Confirm message="Delete the Appointment?" onConfirm={action("onConfirm")} onCancel={action("onCancel")} />)
-.add("Saving", () => <Status message="Saving" />)
-.add("Deleting", () => <Status message="Deleting" />)
-.add("Error Saving", () => <Error message="Could not save appointment." onClose={action("onClose")} />)
-.add("Error Deleting", () => <Error message="Could not delete appointment." onClose={action("onClose")} />);
+.add("Appointment with Time", () => <Appointment 
+    time="12pm" 
+  />)
+.add("Header", () => <Header 
+    time="12pm" 
+  />)
+.add("Empty", () => <Empty 
+    onAdd={action("onAdd")}
+  />)
+.add("Show", () => <Show 
+    student="Lydia Miller-Jones" 
+    interviewer={interviewer} 
+    onEdit={action("onEdit")} 
+    onDelete={action("onDelete")} 
+  />)
+.add("Confirm", () => <Confirm 
+    message="Delete the Appointment?" 
+    onConfirm={action("onConfirm")} 
+    onCancel={action("onCancel")} 
+  />)
+.add("Saving", () => <Status 
+    message="Saving" 
+  />)
+.add("Deleting", () => <Status 
+    message="Deleting" 
+  />)
+.add("Error Saving", () => <Error
+    message="Could not save appointment." 
+    onClose={action("onClose")} 
+  />)
+.add("Error Deleting", () => <Error 
+    message="Could not delete appointment." 
+    onClose={action("onClose")} 
+  />)
+.add("Create Appointment", () => <Form 
+    interviewers={interviewers}
+    onSave={action("onSave")} 
+    onCancel={action("onCancel")} 
+  />)
+.add("Edit Appointment", () => <Form 
+    name="" 
+    interviewers={interviewers}
+    interviewer={interviewer}
+    onSave={action("onSave")}
+    onCancel={action("onCancel")}
+    />)
+.add("Appointment Empty", () => (
+  <Fragment>
+    <Appointment id={1} time="12pm" />
+    <Appointment id="last" time="1pm" />
+  </Fragment>
+  ))
+.add("Appointment Booked", () => (
+  <Fragment>
+    <Appointment
+      id={1}
+      time="12pm"
+      interview={{ student: "Lydia Miller-Jones", interviewer }}
+    />
+    <Appointment id="last" time="1pm" />
+  </Fragment>
+));
