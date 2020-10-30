@@ -10,7 +10,6 @@ export default function Form(props){
   const interviewers = props.interviewers;
   const onCancel = props.onCancel;
   const onSave = props.onSave;
-  const forEdit = props.forEdit;
 
   const reset = function() {
     setName("");
@@ -25,7 +24,7 @@ export default function Form(props){
   const onSubmit = function(){
     onSave(name, interviewer);
   }
-  console.log(props);
+
   return (
     <main className="appointment__card appointment__card--create">
       <section className="appointment__card-left">
