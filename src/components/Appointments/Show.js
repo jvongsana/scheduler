@@ -3,7 +3,7 @@ import React from 'react';
 export default function Show(props){
   const student =  props.student;
   const onEdit = props.onEdit;
-  const onDelete = props.onDelete;
+  const onCancel = props.onCancel;
 
   return (
     <main className="appointment__card appointment__card--show">
@@ -26,7 +26,7 @@ export default function Show(props){
             className="appointment__actions-button"
             src="images/trash.png"
             alt="Delete"
-            onClick={onDelete}
+            onClick={onCancel}
           />
         </section>
       </section>
