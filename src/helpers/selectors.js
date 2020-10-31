@@ -1,4 +1,5 @@
 function getAppointmentsForDay(state, day) {
+
   const filteredAppointments = [];
 
   for (const availDay of state.days) {
