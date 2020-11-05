@@ -1,5 +1,4 @@
 function getAppointmentsForDay(state, day) {
-
   const filteredAppointments = [];
 
   for (const availDay of state.days) {
@@ -35,10 +34,7 @@ function getInterview(state, interview) {
 
 
 function getInterviewersForDay(state, day) {
-  if (!state || !day) {
-    return null;
-  }
-  
+
   const interviewersFound = [];
   for (const availDay of state.days) {  
     if (availDay.name === day) {
@@ -51,7 +47,7 @@ function getInterviewersForDay(state, day) {
       }
     }
   }
-  // console.log(interviewersFound);
+
   return interviewersFound;
 }
 

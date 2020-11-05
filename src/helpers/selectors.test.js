@@ -30,18 +30,18 @@ const state = {
       interview: { student: "Chad Takahashi", interviewer: 2 }
     }
   },
-  interviewers: {
-    "1": {  
+  interviewers: [
+    {  
       "id": 1,
       "name": "Sylvia Palmer",
       "avatar": "https://i.imgur.com/LpaY82x.png"
     },
-    "2": {
-      id: 2,
-      name: "Tori Malcolm",
-      avatar: "https://i.imgur.com/Nmx0Qxo.png"
+    {
+      "id": 2,
+      "name": "Tori Malcolm",
+      "avatar": "https://i.imgur.com/Nmx0Qxo.png"
     }
-  }
+  ]
 };
 
 test("getAppointmentsForDay returns an array", () => {
@@ -85,8 +85,8 @@ test("getInterviewersForDay returns a length matching the number of appointments
 
 test("getInterviewersForDay returns an array containing the correct interviewers objects", () => {
   const [first, second] = getInterviewersForDay(state, "Monday");
-  expect(first).toEqual(state.interviewers["1"]);
-  expect(second).toEqual(state.interviewers["2"]);
+  expect(first).toEqual(state.interviewers[0]);
+  expect(second).toEqual(state.interviewers[1]);
 });
 
 test("getInterviewersForDay returns an empty array when the days data is empty", () => {
