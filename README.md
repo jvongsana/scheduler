@@ -1,5 +1,7 @@
 # Interview Scheduler
 
+    A single page application allowing users to book, edit, and delete appointments. Appointment spots will update accordingly and the number of spots available is displayed on the left-hand side underneth the corrisponding day. Appointments are required to be booked with one of the available interviewers on the specificed day. Errors will occur if the name section is left empty when attempting to book an interview. 
+
 ## Dependencies
   *  Axios: 0.21.x or above
   *  Classnames: 2.2.6 or above
@@ -39,3 +41,11 @@ npm run storybook
 
 ## Screenshots
 
+![home-page](https://github.com/jvongsana/scheduler/blob/master/docs/home-page.png)
+![form](https://github.com/jvongsana/scheduler/blob/master/docs/form.png)
+![interview-booked](https://github.com/jvongsana/scheduler/blob/master/docs/interview-booked.png)
+![empty-student-name](https://github.com/jvongsana/scheduler/blob/master/docs/empty-student-name.png)
+![interview-delete](https://github.com/jvongsana/scheduler/blob/master/docs/interview-delete.png)
+![interview-edit](https://github.com/jvongsana/scheduler/blob/master/docs/interview-edit.png)
+![error-saving](https://github.com/jvongsana/scheduler/blob/master/docs/error-saving.png)
+![error-deleting](https://github.com/jvongsana/scheduler/blob/master/docs/error-deleting.png)
