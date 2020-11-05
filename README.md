@@ -1,6 +1,6 @@
 # Interview Scheduler
 
-    A single page application allowing users to book, edit, and delete appointments. Appointment spots will update accordingly and the number of spots available is displayed on the left-hand side underneth the corrisponding day. Appointments are required to be booked with one of the available interviewers on the specificed day. Errors will occur if the name section is left empty when attempting to book an interview. 
+  A single page application allowing users to book, edit, and delete appointments. Appointment spots will update accordingly and the number of spots available is displayed on the left-hand side underneth the corrisponding day. Appointments are required to be booked with one of the available interviewers on the specificed day. Errors will occur if the name section is left empty when attempting to book an interview. 
 
 ## Dependencies
   *  Axios: 0.21.x or above
