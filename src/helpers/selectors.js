@@ -1,3 +1,4 @@
+// returns array of all the appointments for the day
 function getAppointmentsForDay(state, day) {
   const filteredAppointments = [];
 
@@ -16,6 +17,7 @@ function getAppointmentsForDay(state, day) {
   return filteredAppointments;
 }
 
+//returns object of particular interview
 function getInterview(state, interview) {
   if (!state || !interview) {
     return null;
@@ -32,7 +34,7 @@ function getInterview(state, interview) {
   return interviewFound;
 }
 
-
+//returns array of the interviewers for a particular day
 function getInterviewersForDay(state, day) {
 
   const interviewersFound = [];

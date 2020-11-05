@@ -3,6 +3,7 @@ import className from "classnames";
 
 import "components/DayListItem.scss"
 
+// produces the individual day for the days list
 export default function DayListItem(props) {
   const { name, spots } = props;
   const dayClass  = className('day-list__item', {
@@ -10,6 +11,7 @@ export default function DayListItem(props) {
     'day-list__item--full': props.spots === 0
  });
 
+  // produces grammer changes according to number of spots of interviews/appointments available for the day
   const spotGrammer = function(spots) {
     if (spots > 1) {
     return `${spots} spots remaining`;
