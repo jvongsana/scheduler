@@ -14,7 +14,7 @@ Install dependencies with `npm install`.
 
 ## Setup
 
-1. Install dependencies with `npm install`.'
+1. Install dependencies with `npm install`.
 
 2. Clone and follow the README.md from the [scheduler-api](https://github.com/lighthouse-labs/scheduler-api)
 
