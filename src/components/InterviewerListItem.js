@@ -4,7 +4,7 @@ import className from "classnames";
 import "components/InterviewerListItem.scss";
 
 
-
+// produces individual interviewer icons for the interviewers list
 export default function InterviewListItem(props) {
   const name = props.name;
   const avatar = props.avatar;

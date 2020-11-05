@@ -5,7 +5,7 @@ import "components/InterviewerList.scss";
 
 import InterviewerListItem from "components/InterviewerListItem";
 
-
+// proeuces list of interviewers required and display for the form
 function InterviewerList(props) {
   const interviewers = props.interviewers.map((interviewer) => {
     return (

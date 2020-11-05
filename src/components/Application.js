@@ -20,6 +20,7 @@ export default function Application(props) {
   const appointments = getAppointmentsForDay(state, state.day);
   const interviewers = getInterviewersForDay(state, state.day);
 
+  //goes through appointments slots for the selected day and produces the html accordingly
   const schedule = appointments.map((appointment) => {
     const interview = getInterview(state, appointment.interview);
       return (
@@ -35,6 +36,7 @@ export default function Application(props) {
       );
   });
 
+  // produces main html of left-hand side nav and focused section
   return (
     <main className="layout">
       {

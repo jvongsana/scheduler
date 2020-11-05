@@ -6,6 +6,8 @@ import reducer, {
   SET_INTERVIEW
 } from "reducers/application";
 
+
+//refactor of information from axios requests from database along with requried actions
 export function useApplicationData() {
   
   const [state, dispatch] = useReducer(reducer, {
@@ -32,8 +34,10 @@ export function useApplicationData() {
     })
   }, []);
   
+  // day selector
   const setDay = day => dispatch({ type: SET_DAY, ...state, day });
-
+  
+  // creation of interviewers
   const bookInterview = function(id, interview, mode) {
     return axios.put(`/api/appointments/${id}`, {interview})
     .then(() => {
@@ -47,6 +51,7 @@ export function useApplicationData() {
     });
   }
   
+  // deletion of interviews
   const cancelInterview = function(id, mode) {
     const appointment = {
       ...state.appointments[id],
